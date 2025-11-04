@@ -1,0 +1,23 @@
+:root
+
+
+h1{
+text-align: center;
+    color: rgb(129, 240, 255);
+
+}
+
+card{
+text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: url("../imagene4/cie.webp") no-repeat center center fixed;
+  background-size: cover;
+}
+.card {
+  background: rgba(255, 255, 255, 0.9); /* Fondo blanco semi-transparente */
+  border-radius: 15px; /* Aquí se redondean los bordes */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.2); /* Sombra suave */
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Resistencia</title>
+  <link rel="icon" href="calculadora/llaves.png" type="image/x-icon">
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <h1>CALCULADORA DE RESISTENCIA</h1>
+      <img src="calculadora/llaves.png" alt="calculadora">
+    </div>
+  </header>
+
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="https://www.youtube.com/watch?v=6jIJwZDhkkY">Resistencia</a>
+    <a href="https://complubot.com/productos/electronica/calculadora-de-resistencias/">Contexto</a>
+    <a href="https://www.youtube.com/watch?v=RzJ3QjBsqM0">kkk</a>
+  </nav>
+
+  <main class="contenedor">
+    <form onsubmit="calcularresistencia(event)" class="formulario">
+      <label>1. Banda de colores</label>
+      <br>
+      <select id="banda1">
+        <option value="black">Negro(0)</option>
+        <option value="brown">Marrón(1)</option>
+        <option value="red">Rojo(2)</option>
+        <option value="orange">Naranja(3)</option>
+        <option value="yellow">Amarillo(4)</option>
+        <option value="green">Verde(5)</option>
+        <option value="blue">Azul(6)</option>
+        <option value="violet">Violeta(7)</option>
+        <option value="gray">Gris(8)</option>
+        <option value="white">Blanco(9)</option>
+      </select>
+      <br>
+      <br>
+
+      <label>2. Banda de colores</label>
+      <br>
+      <select id="banda2">
+        <option value="black">Negro(0)</option>
+        <option value="brown">Marrón(1)</option>
+        <option value="red">Rojo(2)</option>
+        <option value="orange">Naranja(3)</option>
+        <option value="yellow">Amarillo(4)</option>
+        <option value="green">Verde(5)</option>
+        <option value="blue">Azul(6)</option>
+        <option value="violet">Violeta(7)</option>
+        <option value="gray">Gris(8)</option>
+        <option value="white">Blanco(9)</option>
+      </select><br>
+      <br>
+
+      <label>Multiplicador</label><br>
+      
+      <select id="banda3">
+        <option value="black">Negro(x1)</option>
+        <option value="brown">Marrón(x10)</option>
+        <option value="red">Rojo(x100)</option>
+        <option value="orange">Naranja(x1000)</option>
+        <option value="yellow">Amarillo(x10000)</option>
+        <option value="green">Verde(x100000)</option>
+        <option value="blue">Azul(x1000000)</option>
+        <option value="violet">Violeta(x10000000)</option>
+        <option value="gray">Gris(x100000000)</option>
+        <option value="white">Blanco(x1000000000)</option>
+      </select><br>
+      <br>
+
+      <label>Tolerancia</label><br>
+      <select id="banda4">
+        <option value="gold">Dorado(±5%)</option>
+        <option value="silver">Plateado(±10%)</option>
+      </select><br><br>
+
+      <input type="submit" value="Calcular">
+   </form>
+
+<div class="form-imagen">
+  <!-- Resistor visual -->
+  <div class="contenedor-resistor">
+    <div class="resistor">
+      <div class="banda b1"></div>
+      <div class="banda b2"></div>
+      <div class="banda b3"></div>
+      <div class="banda b4"></div>
+    </div>
+  </div>
+
+  
+
+ 
+  <div id="cuadros" class="colores">
+    <div id="c1" class="color-box">
+      <div class="preview"></div>
+      <p>--</p>
+    </div>
+    <div id="c2" class="color-box">
+      <div class="preview"></div>
+      <p>--</p>
+    </div>
+    <div id="c3" class="color-box">
+      <div class="preview"></div>
+      <p>--</p>
+    </div>
+    <div id="c4" class="color-box">
+      <div class="preview"></div>
+      <p>--</p>
+    </div>
+  </div>
+<br>
+<br>
+<br>
+
+  <div id="resultado" class="valor-resistencia">
+    Valor de la resistencia: --
+  </div>
+</div>
+
+</main>
+
+
+  <footer>Contáctanos para más información</footer>
+
+  <script src="js.js"></script>
+
+</body>
+</html>
