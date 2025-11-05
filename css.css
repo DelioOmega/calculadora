@@ -38,7 +38,59 @@ footer {
   margin-top: 30px;
 }
 
-/* ===== CONTENEDOR PRINCIPAL ===== */
+body {
+  background-color: #f4f6f8;
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  color: #222;
+  font-size: clamp(14px, 2vw, 18px);
+}
+
+header {
+  background: #1565c0;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+nav {
+  text-align: center;
+  background-color: #1e88e5;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+nav a {
+  color: #ffeb3b;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+footer {
+  background-color: #1565c0;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
+
+
 .contenedor {
   display: flex;
   justify-content: center;
@@ -47,13 +99,14 @@ footer {
   padding: 20px;
 }
 
-/* ===== FORMULARIO ===== */
+
 form {
   background-color: #fff;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 300px;
+  max-width: 100%;
 }
 
 label {
@@ -73,6 +126,7 @@ input[type="submit"] {
   cursor: pointer;
   margin-top: 15px;
   width: 100%;
+  font-size: clamp(14px, 2vw, 16px);
   transition: 0.3s;
 }
 
@@ -81,7 +135,7 @@ input[type="submit"]:hover {
   transform: scale(1.03);
 }
 
-/* ===== SELECTS CON COLORES ===== */
+
 select {
   width: 100%;
   padding: 10px;
@@ -101,9 +155,12 @@ select option {
   color: #fff;
   padding: 5px;
 }
-select:hover { border-color: #555; transform: scale(1.03); }
 
-/* Colores de fondo en los <option> */
+select:hover {
+  border-color: #555;
+  transform: scale(1.03);
+}
+
 option[value="black"] { background: black; }
 option[value="brown"] { background: #4e342e; }
 option[value="red"] { background: #d32f2f; }
@@ -117,17 +174,16 @@ option[value="white"] { background: #fafafa; color: #000; }
 option[value="gold"] { background: #d4af37; color: #000; }
 option[value="silver"] { background: #c0c0c0; color: #000; }
 
-/* ===== RESISTOR HECHO CON CSS ===== */
+
 .contenedor-resistor {
   position: relative;
   width: 350px;
   height: 100px;
   background: #c7b299;
-  border-radius: 15px; /* menos redondeado */
+  border-radius: 15px;
   margin-top: 20px;
-  box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
-
 
 .banda {
   position: absolute;
@@ -149,6 +205,7 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   justify-content: center;
   gap: 10px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .cuadro {
@@ -159,7 +216,7 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   line-height: 30px;
   font-weight: bold;
   color: white;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
 #resultado {
@@ -169,22 +226,6 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   font-weight: bold;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .contenedor {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .contenedor-resistor {
-    width: 280px;
-    height: 80px;
-  }
-
-  form {
-    width: 90%;
-  }
-}
 .form-imagen {
   display: flex;
   flex-direction: column;
@@ -192,12 +233,17 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   background: #fff;
   padding: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   transition: 0.3s ease;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
-
+/* ===== SECCIÓN DE COLORES ===== */
 .titulo-colores {
   margin-top: 25px;
   font-size: 18px;
@@ -221,11 +267,9 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   padding: 10px;
   width: 70px;
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: 0.3s ease;
 }
-
-
 
 .color-box .preview {
   width: 100%;
@@ -235,6 +279,7 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   border: 1px solid #ccc;
 }
 
+/* ===== RESULTADO FINAL ===== */
 .valor-resistencia {
   margin-top: 25px;
   padding: 10px 15px;
@@ -247,8 +292,54 @@ option[value="silver"] { background: #c0c0c0; color: #000; }
   text-align: center;
   width: 90%;
   max-width: 300px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  .contenedor {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .contenedor-resistor {
+    width: 90%;
+    max-width: 280px;
+    height: 80px;
+  }
+
+  form {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .valor-resistencia {
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
+
+section, .form-imagen {
+  margin-bottom: 25px;
+}
+
 
 
 
