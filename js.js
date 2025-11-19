@@ -20,8 +20,8 @@ function calcularresistencia(event) {
   const b4 = document.getElementById("banda4").value;
 
   // Calcular el valor de la resistencia
-  const valor = (colores[b1] * 10 + colores[b2]) * multiplicadores[b3];
-  const tolerancia = tolerancias[b4];
+  const valor = Number(`${colores[b1]}${colores[b2]}`) * multiplicadores[b3];
+const tolerancia = tolerancias[b4];
 
   let resultadoTexto = "";
   if (valor >= 1000000) resultadoTexto = (valor / 1000000) + " MΩ " + tolerancia;
@@ -61,3 +61,4 @@ function calcularresistencia(event) {
 
 // Al cargar la página, inicializa todo
 window.addEventListener("DOMContentLoaded", calcularresistencia);
+
